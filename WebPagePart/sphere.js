@@ -1,4 +1,8 @@
 var sphere = null;
+    renderer = null;
+    scene = null;
+    camera = null;
+    animating = false;
      
 function addSphere(){
     var container = document.getElementById("container");

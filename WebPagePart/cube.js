@@ -1,4 +1,8 @@
 var cube = null;
+    renderer = null;
+    scene = null;
+    camera = null;
+    animating = false;
 
 function addCube(){
     var container = document.getElementById("container");
