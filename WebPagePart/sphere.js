@@ -1,8 +1,4 @@
-var renderer = null;
-    scene = null;
-    camera = null;
-    sphere = null;
-    animating = false;
+var sphere = null;
      
 function addSphere(){
     var container = document.getElementById("container");
@@ -29,12 +25,12 @@ function addSphere(){
     
     sphere = new THREE.Mesh(geometry, material);
     
-    //sphere.rotation.x = Math.PI / 5;
-    //sphere.rotation.y = Math.PI / 5;
-    
-    addMouseHandler();
+    sphere.rotation.x = Math.PI / 5;
+    sphere.rotation.y = Math.PI / 5;
     
     scene.add(sphere);
+    
+    addMouseHandler();
     
     run();
 }
@@ -47,7 +43,7 @@ function run(){
     
     if(animating){
         
-        sphere.rotation.y += 0.01;
+        sphere.rotation.x += 0.01;
         sphere.rotation.z += 0.01;
     
     }
