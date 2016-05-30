@@ -37,7 +37,7 @@ function addCube(){
     
     scene.add(cube);
     
-    addMouseHandler();
+    //addMouseHandler();
     
     run();
 }

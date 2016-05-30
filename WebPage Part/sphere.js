@@ -25,7 +25,7 @@ function addSphere(){
     
     var material = new THREE.MeshPhongMaterial({map:map});
     
-    var geometry = new THREE.SphereGeometry(5, 32, 32);
+    var geometry = new THREE.SphereGeometry(1, 16, 16);
     
     sphere = new THREE.Mesh(geometry, material);
     
@@ -36,7 +36,7 @@ function addSphere(){
     
     scene.add(sphere);
     
-    renderer.render()
+    renderer.render();
 }
     
 function run(){
