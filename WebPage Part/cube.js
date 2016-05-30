@@ -23,10 +23,10 @@ function addCube(){
     light.position.set(0, 0, 1);
     scene.add(light);
     
-    var mapUrl = "Photo/1.jpg";
-    var map = THREE.ImageUtils.loadTexture(mapUrl);
+    var cubeSkinUrl = "Photo/1.jpg";
+    var cubeSkin = THREE.ImageUtils.loadTexture(cubeSkinUrl);
     
-    var material = new THREE.MeshPhongMaterial({map:map});
+    var material = new THREE.MeshPhongMaterial({map:cubeSkin});
     
     var geometry = new THREE.CubeGeometry(1, 1, 1);
     
@@ -37,7 +37,7 @@ function addCube(){
     
     scene.add(cube);
     
-    //addMouseHandler();
+    addMouseHandler();
     
     run();
 }
