@@ -4,7 +4,7 @@ var renderer = null;
     cube = null;
     animating = false;
      
-function onLoad(){
+function addCube(){
     var container = document.getElementById("container");
     //var stats = new Stats();
     //stats.showPanel(0);
@@ -69,8 +69,4 @@ function addMouseHandler(){
 function onMouseUp(event){
     event.preventDefault();
     animating = !animating;
-}
-
-function addCube(){
-    document.getElementById("cube").innerHTML = "Cube added.";    
 }
