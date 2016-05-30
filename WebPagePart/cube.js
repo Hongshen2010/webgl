@@ -10,13 +10,13 @@ function addCube(){
     //stats.showPanel(0);
     //document.body.appendChild(stats.dom);
     
-    renderer = new THREE.WebGLRenderer({antialias:true});
+    renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setSize(container.offsetWidth, container.offsetHeight);
-    container.appendChild(renderer.domElement); 
+    container.appendChild(renderer.domElement);
     
     scene = new THREE.Scene();
     
-    camera = new THREE.PerspectiveCamera(45, container.offsetWidth/container.offsetHeight, 1, 4000);
+    camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 1, 4000);
     camera.position.set(0, 0, 3);
     
     var light = new THREE.DirectionalLight(0xffffff, 1.5);
