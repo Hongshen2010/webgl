@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
+    
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="MyJS.js" type="text/javascript"></script>
-    <script src="three.js" type="text/javascript"></script>
-    <script src="3Dtexturedspin.html" type=text/javascript></script>
+    <script src="three.min.js" type="text/javascript"></script>
+    <script src="jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="RequestAnimationFrame.js" type="text/javascript"></script>
+    <script src="3Dtexturedspin.js" type=text/javascript></script>
     <link href="MyCSS.css" rel="stylesheet" type="text/css">
+
 </head>
+    
 <body>
+    
 <ul id="menu">
     <li>
         <a href="#">Menu 1</a>
         <ul>
             <li>
-                <a href="#">Menu 1-1</a>
+                <a href="#" onclick="onLoad();">Cube</a>
             </li>
             <li>
                 <a href="#">Menu 1-2</a>
@@ -53,5 +60,16 @@
         </ul>
     </li>
 </ul>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+<div id="container"
+             style="width:95%; height:80%; position:absolute;"></div>
+    
 </body>
 </html>
