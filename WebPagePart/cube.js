@@ -57,7 +57,7 @@ function run(){
     
     //stats.end();
     
-    requestAnimationFrame(run);
+    window.requestAnimationFrame(run);
 }
     
 function addMouseHandler(){
