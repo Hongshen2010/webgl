@@ -1,27 +1,4 @@
-var cube = null;
-    renderer = null;
-    scene = null;
-    camera = null;
-    animating = false;
-
 function addCube(){
-    var container = document.getElementById("container");
-    //var stats = new Stats();
-    //stats.showPanel(0);
-    //document.body.appendChild(stats.dom);
-    
-    renderer = new THREE.WebGLRenderer({antialias: true});
-    renderer.setSize(container.offsetWidth, container.offsetHeight);
-    container.appendChild(renderer.domElement);
-    
-    scene = new THREE.Scene();
-    
-    camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 1, 4000);
-    camera.position.set(0, 0, 3);
-    
-    var light = new THREE.DirectionalLight(0xffffff, 1.5);
-    light.position.set(0, 0, 1);
-    scene.add(light);
     
     var cubeSkinUrl = "Photo/1.jpg";
     var cubeSkin = THREE.ImageUtils.loadTexture(cubeSkinUrl);
@@ -35,9 +12,16 @@ function addCube(){
     cube.rotation.x = Math.PI / 5;
     cube.rotation.y = Math.PI / 5;
     
-    scene.add(cube);
+    var size = 10;
+    var step = 1;
+    var gridHelper = new THREE.GridHelper(size, step);
     
-    addMouseHandler();
+    scene.add(cube);
+    scene.add(gridHelper);
+    
+    //renderer.domElement.addEventListener('mousemove', onDocumentMouseMove, false);
+    //renderer.domElement.addEventListener('mousedown', onDocumentMouseDown, false);
+    //renderer.domElement.addEventListener('mouseup', onDocumentMouseUp, false);
     
     run();
 }
@@ -48,25 +32,7 @@ function run(){
     
     renderer.render(scene, camera);
     
-    if(animating){
-        
-        cube.rotation.y += 0.01;
-        cube.rotation.z += 0.01;
-    
-    }
-    
     //stats.end();
     
     window.requestAnimationFrame(run);
-}
-    
-function addMouseHandler(){
-    var dom = renderer.domElement;
-    
-    dom.addEventListener('mouseup', onMouseUp, false);
-}
-    
-function onMouseUp(event){
-    event.preventDefault();
-    animating = !animating;
 }
