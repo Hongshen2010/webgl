@@ -10,14 +10,9 @@ function addCube(){
     cube = new THREE.Mesh(geometry, material);
     
     cube.rotation.x = Math.PI / 5;
-    cube.rotation.y = Math.PI / 5;
-    
-    var size = 10;
-    var step = 1;
-    var gridHelper = new THREE.GridHelper(size, step);
+    cube.rotation.y = Math.PI / 5
     
     scene.add(cube);
-    scene.add(gridHelper);
     
     //renderer.domElement.addEventListener('mousemove', onDocumentMouseMove, false);
     //renderer.domElement.addEventListener('mousedown', onDocumentMouseDown, false);

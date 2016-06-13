@@ -5,12 +5,13 @@
     
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="MyJS.js" type="text/javascript"></script>
     <script src="libs/three.min.js" type="text/javascript"></script>
     <script src="libs/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="libs/TrackballControls.js" type="text/javascript"></script>
+    <script src="libs/stats.min.js" type="text/javascript"></script>
     <script src="libs/RequestAnimationFrame.js" type="text/javascript"></script>
-    <script src="cube.js" type=text/javascript></script>
-    <script src="sphere.js" type=text/javascript></script>
+    <script src="js/cube.js" type=text/javascript></script>
+    <script src="js/sphere.js" type=text/javascript></script>
     <link href="css/MyCSS.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -21,7 +22,7 @@
     <li>
         <a href="#">Menu 1</a>
         <ul>
-            <li>
+            <li>    
                 <a href="#" onclick="addCube();">Cube</a>
             </li>
             <li>
@@ -71,6 +72,7 @@
     <div id="container"
              style="width:95%; height:80%; position:absolute;"></div>
     <script>
+        
         var cube = null;
             sphere = null;
             renderer = null;
@@ -85,6 +87,7 @@
 
         renderer = new THREE.WebGLRenderer({antialias: true});
         renderer.setSize(container.offsetWidth, container.offsetHeight);
+        renderer.setClearColor(0x000000);
         container.appendChild(renderer.domElement);
 
         scene = new THREE.Scene();
@@ -95,6 +98,13 @@
         var light = new THREE.DirectionalLight(0xffffff, 1.5);
         light.position.set(0, 0, 1);
         scene.add(light);
+        var size = 10;
+        var step = 1;
+        var gridHelper = new THREE.GridHelper(size, step);
+
+        scene.add(cube);
+        scene.add(gridHelper);
+        
     </script>
     
 </body>

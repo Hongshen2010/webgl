@@ -1,9 +1,6 @@
 function addSphere(){
     
-    var sphereSkinUrl = "Photo/1.jpg";
-    var sphereSkin = THREE.ImageUtils.loadTexture(sphereSkinUrl);
-    
-    var material = new THREE.MeshPhongMaterial( {map: sphereSkin} );
+    var material = new THREE.MeshPhongMaterial(  );
     
     var geometry = new THREE.SphereGeometry(0.6, 32, 32);
     
