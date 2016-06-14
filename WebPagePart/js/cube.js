@@ -9,25 +9,8 @@ function addCube(){
     
     cube = new THREE.Mesh(geometry, material);
     
-    cube.rotation.x = Math.PI / 5;
-    cube.rotation.y = Math.PI / 5
+    objects.push(cube);
     
     scene.add(cube);
     
-    //renderer.domElement.addEventListener('mousemove', onDocumentMouseMove, false);
-    //renderer.domElement.addEventListener('mousedown', onDocumentMouseDown, false);
-    //renderer.domElement.addEventListener('mouseup', onDocumentMouseUp, false);
-    
-    run();
-}
-    
-function run(){
-    
-    //stats.begin();
-    
-    renderer.render(scene, camera);
-    
-    //stats.end();
-    
-    window.requestAnimationFrame(run);
 }
