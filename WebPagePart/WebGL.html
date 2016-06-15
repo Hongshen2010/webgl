@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <script src="WebGL.js"></script>
+    <script src="jquery-2.2.4.js"></script>
+    <script src="bootstrap.js"></script>
+    <style>
+        #div2,#div3{
+            float: left;
+        }
+         canvas{
+            border: 1px solid red;
+        }
+        input{
+
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">3D Editor</a>
+    </div>
+
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">File</a></li>
+            <li><a href="#">Edit</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Java
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">jmeter</a></li>
+                    <li><a href="#">EJB</a></li>
+                    <li><a href="#">Sphere</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" onclick="addRectangle()">Rectangle</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Sphere</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="div2">
+    <canvas id="myCanvas" width="1500" height="1500"></canvas>
+</div>
+
+<div id="div3">
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <label for="name">Color:</label>
+            &nbsp;&nbsp;&nbsp;
+            <label for="name">R:</label>
+            <input type="text" class="form-control input-sm" id="name" placeholder="100">
+            <label for="name">G:</label>
+            <input type="text" class="form-control input-sm" id="name" placeholder="100">
+            <label for="name">B:</label>
+            <input type="text" class="form-control input-sm" id="name" placeholder="100">
+        </div>
+    </form>
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <label for="name">Color:</label>
+            <input type="text" class="form-control input-sm" id="name" placeholder="100">
+            <input type="text" class="form-control input-sm" id="name" placeholder="100">
+            <input type="text" class="form-control input-sm" id="name" placeholder="100">
+        </div>
+    </form>
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <label for="name">Color:</label>
+            <input type="text" class="form-control input-sm" id="name" placeholder="100">
+            <input type="text" class="form-control input-sm" id="name" placeholder="100">
+            <input type="text" class="form-control input-sm" id="name" placeholder="100">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

@@ -48,7 +48,6 @@
         </ul>
     </li>
 </ul>
-<br><br><br><br>
 </head>
     
 <body>
@@ -117,7 +116,7 @@
             renderer = new THREE.WebGLRenderer( { antialias: true } );
             renderer.setClearColor( 0xf0f0f0 );
             renderer.setPixelRatio( window.devicePixelRatio );
-            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.setSize( window.innerWidth * 0.85, window.innerHeight * 0.85 );
             renderer.sortObjects = false;
             
             renderer.shadowMap.enabled = true;
@@ -144,8 +143,6 @@
             controls.update();
             renderer.render(scene, camera);
         }
-        
     </script>
-    
 </body>
 </html>
