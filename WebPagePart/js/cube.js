@@ -9,8 +9,12 @@ function addCube(){
     
     cube = new THREE.Mesh(geometry, material);
     
+    var wireframe = new THREE.WireframeHelper(cube, 0x000000);
+    
     objects.push(cube);
     
     scene.add(cube);
+    
+    scene.add(wireframe);
     
 }
