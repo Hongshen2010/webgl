@@ -1,5 +1,5 @@
 body {
-    background: #EDE8E2;
+    background: #666666;
     margin: 15px;
 }
 #menu {
@@ -11,7 +11,7 @@ body {
 
 #menu, #menu ul {
     list-style-type: none;
-    background: #A3C159;
+    background: #444444;
     margin: 0;
     padding: 0;
 }
