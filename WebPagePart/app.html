@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <ul id="menu">
     <li>
-        <a href="#">Menu 1</a>
+        <a href="#">File</a>
         <ul>
             <li>    
                 <a href="#" onclick="addCube();">Cube</a>
@@ -30,11 +30,11 @@
             </li>
             <li>
                 <a href="#" onclick="addCylinder();">Cylinder</a>
-            </li>
+            </li>   
         </ul>
     </li>
     <li>
-        <a href="#">Menu 3</a>
+        <a href="#">Edit</a>
         <ul>
             <li>
                 <a href="#">Menu 3-1</a>
@@ -111,7 +111,7 @@
             
             scene.add(light);
             
-            var gridHelper = new THREE.GridHelper(10, 0.5);
+            var gridHelper = new THREE.GridHelper(20, 0.5);
             scene.add(gridHelper);
             
             var axisHelper = new THREE.AxisHelper(1);
@@ -147,7 +147,7 @@
             document.body.appendChild( stats.dom );
             stats.dom.style.position = 'absolute';
             stats.dom.style.right = '1840px';
-            stats.dom.style.top = '971px';
+            stats.dom.style.top = '961px';
             
             renderer.domElement.addEventListener('mousemove', onDocumentMouseMove, false);
             renderer.domElement.addEventListener('mousedown', onDocumentMouseDown, false);
