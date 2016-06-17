@@ -86,21 +86,21 @@
             document.body.appendChild(container);
 
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-            camera.position.z = 100;
+            camera.position.set(100, 100, 100);
             
             controls = new THREE.OrbitControls(camera);
-            controls.staticMoving = false;
+            controls.enableDamping = true;
             controls.rotateSpeed = 0.1;
             
             scene = new THREE.Scene();
             
-            var light = new THREE.SpotLight( 0xffffff, 1.5 );
-            light.position.set( 100, 100, 100 );
-            light.castShadow = true;
+            scene.add(new THREE.AmbientLight( 0x505050 ));
             
+            var light = new THREE.SpotLight( 0xffffff, 1.5 );
+            light.position.set( 0, 500, 200 );
+            light.castShadow = true;
             light.shadow = new THREE.LightShadow( new THREE.PerspectiveCamera( 50, 1, 200, 10000 ) );
             light.shadow.bias = - 0.00022;
-
             light.shadow.mapSize.width = 2048;
             light.shadow.mapSize.height = 2048;
             
