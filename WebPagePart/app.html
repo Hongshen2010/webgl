@@ -4,6 +4,7 @@
 <head>
     <title>3D_Editor</title>
     <meta charset="UTF-8">
+    <div id="container"></div>
     <ul id="menu">
     <li>
         <a href="#">File</a>
@@ -82,10 +83,12 @@
         
         function init(){
             
-            container = document.createElement("div");
+            container = document.getElementById("container");
             document.body.appendChild(container);
-
-            camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+            container.width = '1488';
+            container.height = '911';
+            
+            camera = new THREE.PerspectiveCamera(45, container.width / container.height, 1, 10000);
             camera.position.set(100, 100, 100);
             
             controls = new THREE.OrbitControls(camera);
@@ -130,8 +133,7 @@
             
             renderer = new THREE.WebGLRenderer( { antialias: true } );
             renderer.setClearColor( 0x222222 );
-            renderer.setPixelRatio( window.devicePixelRatio );
-            renderer.setSize( window.innerWidth * 0.80, window.innerHeight * 0.85 );
+            renderer.setSize( container.width, container.height );
             renderer.sortObjects = false;
             
             renderer.shadowMap.enabled = true;
