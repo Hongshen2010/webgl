@@ -1,6 +1,7 @@
 function addCube(){
     
     var material = new THREE.MeshLambertMaterial( {color: 0x456789} );
+    material.transparent = true;
     
     var geometry = new THREE.CubeGeometry(10, 10, 10);
     

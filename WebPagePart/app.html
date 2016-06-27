@@ -131,7 +131,7 @@
             renderer = new THREE.WebGLRenderer( { antialias: true } );
             renderer.setClearColor( 0x222222 );
             renderer.setPixelRatio( window.devicePixelRatio );
-            renderer.setSize( window.innerWidth * 0.85, window.innerHeight * 0.85 );
+            renderer.setSize( window.innerWidth * 0.80, window.innerHeight * 0.85 );
             renderer.sortObjects = false;
             
             renderer.shadowMap.enabled = true;
@@ -141,8 +141,8 @@
             stats = new Stats();
             document.body.appendChild( stats.dom );
             stats.dom.style.position = 'absolute';
-            stats.dom.style.right = '1840px';
-            stats.dom.style.top = '961px';
+            stats.dom.style.left = '0px';
+            stats.dom.style.top = '947px';
             
             renderer.domElement.addEventListener('mousemove', onDocumentMouseMove, false);
             renderer.domElement.addEventListener('mousedown', onDocumentMouseDown, false);

@@ -1,6 +1,7 @@
 function addSphere(){
     
     var material = new THREE.MeshLambertMaterial({color: 0x567893});
+    material.transparent = true;
     
     var geometry = new THREE.SphereGeometry(5, 32, 32);
     

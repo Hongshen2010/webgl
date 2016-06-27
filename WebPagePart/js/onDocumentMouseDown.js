@@ -17,6 +17,12 @@ function onDocumentMouseDown( event ) {
             offset.copy( intersection ).sub( SELECTED.position );
 
         }
+        
+        objectOpacity = SELECTED.material.opacity;
+        SELECTED.material.opacity = 0.5;
+        
+        wireframe = new THREE.WireframeHelper(SELECTED, 0xaaaaaa);
+        scene.add(wireframe);
 
         container.style.cursor = 'move';
 

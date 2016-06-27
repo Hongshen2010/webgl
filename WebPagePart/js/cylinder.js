@@ -1,6 +1,7 @@
 function addCylinder(){
     
     var material = new THREE.MeshLambertMaterial({color: 0x656565});
+    material.transparent = true;
     
     var geometry = new THREE.CylinderGeometry(5, 5, 9, 32);
     

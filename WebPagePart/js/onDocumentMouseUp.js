@@ -9,6 +9,9 @@ function onDocumentMouseUp( event ) {
         SELECTED = null;
 
     }
+    
+    scene.remove(wireframe);
+    SELECTED.material.opacity = objectOpacity;
 
     container.style.cursor = 'auto';
 
