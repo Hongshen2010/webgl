@@ -11,7 +11,7 @@ function onDocumentMouseUp( event ) {
     }
     
     scene.remove(wireframe);
-    SELECTED.material.opacity = objectOpacity;
+    //SELECTED.material.opacity = objectOpacity;
 
     container.style.cursor = 'auto';
 

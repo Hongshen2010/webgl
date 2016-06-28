@@ -16,6 +16,6 @@ function addCube(){
     
     scene.add(cube);
     
-    scene.add(wireframe);
+    //scene.add(wireframe);
     
 }

@@ -16,6 +16,6 @@ function addCylinder(){
     
     scene.add(cylinder);
     
-    scene.add(wireframe);
+    //scene.add(wireframe);
     
 }

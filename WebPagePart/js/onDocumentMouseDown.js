@@ -5,6 +5,9 @@ function onDocumentMouseDown( event ) {
     raycaster.setFromCamera( mouse, camera );
 
     var intersects = raycaster.intersectObjects( objects );
+    
+    //debug
+    console.log(intersects.length);
 
     if ( intersects.length > 0 ) {
 
@@ -19,9 +22,9 @@ function onDocumentMouseDown( event ) {
         }
         
         objectOpacity = SELECTED.material.opacity;
-        SELECTED.material.opacity = 0.5;
+        //SELECTED.material.opacity = 0.5;
         
-        wireframe = new THREE.WireframeHelper(SELECTED, 0xaaaaaa);
+        wireframe = new THREE.WireframeHelper(SELECTED, 0xeeeeee);
         scene.add(wireframe);
 
         container.style.cursor = 'move';

@@ -16,6 +16,6 @@ function addSphere(){
     
     scene.add(sphere);
     
-    scene.add(wireframe);
+    //scene.add(wireframe);
     
 }
