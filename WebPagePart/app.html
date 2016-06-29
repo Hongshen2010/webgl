@@ -91,6 +91,7 @@
     <script src="js/onDocumentMouseUp.js" type=text/javascript></script>
     <script src="js/onWindowResize.js" type=text/javascript></script>
     <script src="js/setView.js" type=text/javascript></script>
+    <script src="js/JSONLader.js" type="text/javascript"></script>
     <link href="css/MyCSS.css" rel="stylesheet" type="text/css">
     <script>
         
@@ -108,13 +109,14 @@
         
         init();
         animate();
+        loadFromJSON();
         
         function init(){
             
             container = document.getElementById("container");
             document.body.appendChild(container);
             container.width = '1488';
-            container.height = '911';
+            container.height = '985';
             
             camera = new THREE.PerspectiveCamera(45, container.width / container.height, 1, 10000);
             camera.position.set(100, 100, 100);
@@ -175,7 +177,7 @@
             document.body.appendChild( stats.dom );
             stats.dom.style.position = 'absolute';
             stats.dom.style.left = '0px';
-            stats.dom.style.top = '947px';
+            stats.dom.style.top = '973px';
             
             renderer.domElement.addEventListener('mousemove', onDocumentMouseMove, false);
             renderer.domElement.addEventListener('mousedown', onDocumentMouseDown, false);
