@@ -4,6 +4,7 @@ function loadFromJSON(){
     
     objectLoader.load("./examples/teapot.json", function ( obj ) {
         scene.add( obj );
+        objects.push(obj);
     } );
     
 }
